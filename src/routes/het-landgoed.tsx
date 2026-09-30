@@ -82,7 +82,14 @@ function HetLandgoedPage() {
           width={1068}
           height={742}
           className="mx-auto w-full max-w-[92rem] h-auto"
+          style={{
+            WebkitMaskImage:
+              "radial-gradient(120% 120% at 50% 50%, #000 62%, transparent 97%)",
+            maskImage:
+              "radial-gradient(120% 120% at 50% 50%, #000 62%, transparent 97%)",
+          }}
         />
+
         <p className="mx-auto mt-6 max-w-[92rem] text-xs text-muted-foreground">
           De Ferrariskaart van Vliermaal (1771) — een historische landkaart,
           bedoeld om de samenhang te tonen — geen kadastrale kaart.
