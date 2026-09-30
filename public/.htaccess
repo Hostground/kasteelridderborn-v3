@@ -1,0 +1,64 @@
+# ─────────────────────────────────────────────────────────────
+# Ridderborn — Apache config for cPanel / shared hosting
+# ─────────────────────────────────────────────────────────────
+
+# Force HTTPS (optional — uncomment after SSL is installed)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── SPA fallback ────────────────────────────────────────────
+# Serve real files/folders if they exist, otherwise serve index.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# ── Compression ─────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml font/woff font/woff2
+</IfModule>
+
+# ── Cache-Control ───────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Hashed JS/CSS bundles — cache forever
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  # Images & fonts
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+  # HTML — short cache so updates appear quickly
+  ExpiresByType text/html "access plus 5 minutes"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|jpg|jpeg|png|webp|svg|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ── Security headers ────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── Disable directory listing ───────────────────────────────
+Options -Indexes
+
+# ── Custom 404 → SPA handles it ─────────────────────────────
+ErrorDocument 404 /index.html
