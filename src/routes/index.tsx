@@ -104,7 +104,7 @@ const chapters: ChapterData[] = [
     title: "De Oranjerie",
     body: "Een bijzondere ruimte aan het park, met veel licht en uitzicht op het groen. De precieze invulling en het vergunde gebruik worden op dit moment zorgvuldig in kaart gebracht.",
     img: p5_1.url,
-    alt: "Licht historisch bijgebouw op het landgoed met hoge ramen en uitzicht op het park.",
+    alt: "Luchtfoto van de glazen oranjerie met koperglazen dak, temidden van het groene park met vijver.",
     to: "/de-oranjerie",
     linkLabel: "De Oranjerie",
     ctaLabel: "Bekijk De Oranjerie",
