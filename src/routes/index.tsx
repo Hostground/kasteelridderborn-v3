@@ -24,7 +24,7 @@ import kasteel from "@/assets/brochure/kasteel.jpg.asset.json";
 import overzijdeHero from "@/assets/brochure/overzijde-hero.jpg.asset.json";
 import page22 from "@/assets/brochure/page_22.jpg.asset.json";
 import p3_1 from "@/assets/brochure/p3_1.jpg.asset.json";
-import p5_1 from "@/assets/brochure/p5_1.jpg.asset.json";
+import p5_1 from "@/assets/brochure/DSC_8275.jpg.asset.json";
 import p15_1 from "@/assets/brochure/p15_1.jpg.asset.json";
 import p18_1 from "@/assets/brochure/p18_1.jpg.asset.json";
 import p29_1 from "@/assets/brochure/p29_1.jpg.asset.json";
@@ -104,7 +104,7 @@ const chapters: ChapterData[] = [
     title: "De Oranjerie",
     body: "Een bijzondere ruimte aan het park, met veel licht en uitzicht op het groen. De precieze invulling en het vergunde gebruik worden op dit moment zorgvuldig in kaart gebracht.",
     img: p5_1.url,
-    alt: "Licht historisch bijgebouw op het landgoed met hoge ramen en uitzicht op het park.",
+    alt: "Luchtfoto van de glazen oranjerie met koperglazen dak, temidden van het groene park met vijver.",
     to: "/de-oranjerie",
     linkLabel: "De Oranjerie",
     ctaLabel: "Bekijk De Oranjerie",
