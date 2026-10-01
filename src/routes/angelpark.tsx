@@ -293,12 +293,22 @@ function AngelparkPage() {
         <h2 className="font-display text-3xl md:text-5xl mt-5">
           Kom wandelen, verstillen, <span className="italic text-primary">verwonderen.</span>
         </h2>
-        <Link
-          to="/contact"
-          className="inline-flex mt-10 items-center gap-2 bg-primary text-primary-foreground px-7 py-4 rounded-full text-sm hover:bg-primary/90 transition"
-        >
-          Plan je bezoek →
-        </Link>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://angelpark.be/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-4 rounded-full text-sm hover:bg-primary/90 transition"
+          >
+            Meer info op angelpark.be ↗
+          </a>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 border border-foreground/25 text-foreground px-7 py-4 rounded-full text-sm hover:bg-secondary/60 transition"
+          >
+            Plan je bezoek →
+          </Link>
+        </div>
       </section>
 
       <Footer />
