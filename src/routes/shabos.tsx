@@ -8,7 +8,7 @@ import p23_1 from "@/assets/brochure/p23_1.jpg.asset.json";
 import p23_3 from "@/assets/brochure/p23_3.jpg.asset.json";
 import p24_1 from "@/assets/brochure/p24_1.jpg.asset.json";
 import p24_2 from "@/assets/brochure/p24_2.jpg.asset.json";
-import p27_1 from "@/assets/brochure/p27_1.jpg.asset.json";
+import p23_2 from "@/assets/brochure/p23_2.jpg.asset.json";
 
 export const Route = createFileRoute("/shabos")({
   head: () => ({
