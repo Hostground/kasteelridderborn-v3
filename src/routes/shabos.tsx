@@ -112,8 +112,8 @@ function ShabosPage() {
             className="col-span-6 md:col-span-4 aspect-[4/3] object-cover w-full rounded-xl"
           />
           <img
-            src={p27_1.url}
-            alt="Houten pad met zonne-lampjes naar een prieel in een tuin bij schemering."
+            src={p23_2.url}
+            alt="Moderne witte woning tussen de bomen bij Shabos, omringd door park en bosrand."
             className="col-span-6 md:col-span-2 aspect-[4/3] object-cover w-full rounded-xl"
           />
           <img
