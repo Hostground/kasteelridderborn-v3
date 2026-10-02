@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/het-landgoed")({
 });
 
 function HetLandgoedPage() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="bg-background text-foreground">
       <Nav />
@@ -127,22 +129,69 @@ function HetLandgoedPage() {
               aria-hidden="true"
               className="kaart-pin-ripple-delayed pointer-events-none absolute h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary/50"
             />
-            <svg
-              viewBox="0 0 24 24"
-              className="kaart-pin-svg absolute -translate-x-1/2 -translate-y-full h-10 w-10 drop-shadow-[0_3px_6px_rgba(0,0,0,0.25)] md:h-12 md:w-12"
-              role="img"
-              aria-label="Kasteel Ridderborn op de kaart"
+            <button
+              type="button"
+              onClick={() => setOpen((o) => !o)}
+              aria-expanded={open}
+              aria-label="Toon informatie over Kasteel Ridderborn"
+              className="group absolute -translate-x-1/2 -translate-y-full cursor-pointer focus:outline-none"
             >
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-                className="fill-primary stroke-background"
-                strokeWidth="1.2"
-              />
-              <circle cx="12" cy="9" r="2.4" className="fill-background" />
-            </svg>
-            <span className="absolute top-3 -translate-x-1/2 whitespace-nowrap rounded-full border border-border bg-background/90 px-3 py-1 font-display text-xs tracking-wide text-foreground shadow-sm backdrop-blur-sm md:text-sm">
+              <svg
+                viewBox="0 0 24 24"
+                className="kaart-pin-svg h-10 w-10 drop-shadow-[0_3px_6px_rgba(0,0,0,0.25)] md:h-12 md:w-12"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  className="fill-primary stroke-background"
+                  strokeWidth="1.2"
+                />
+                <circle cx="12" cy="9" r="2.4" className="fill-background" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => setOpen((o) => !o)}
+              className="absolute top-3 -translate-x-1/2 cursor-pointer whitespace-nowrap rounded-full border border-border bg-background/90 px-3 py-1 font-display text-xs tracking-wide text-foreground opacity-75 shadow-sm backdrop-blur-sm transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 md:text-sm"
+            >
               Kasteel Ridderborn
-            </span>
+            </button>
+            {open && (
+              <div
+                role="dialog"
+                aria-label="Kasteel Ridderborn"
+                className="animate-scale-in absolute bottom-14 left-1/2 z-10 w-64 -translate-x-1/2 overflow-hidden rounded-lg border border-border bg-background text-left shadow-xl md:w-72"
+              >
+                <img
+                  src={kasteel.url}
+                  alt="Kasteel Ridderborn in roodbruine baksteen"
+                  className="h-32 w-full object-cover"
+                />
+                <div className="p-4">
+                  <p className="font-display text-lg">Kasteel Ridderborn</p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Het historische hart van het landgoed: eeuwenoude baksteen,
+                    omringd door park, oude bomen en stilte.
+                  </p>
+                  <div className="mt-4 flex items-center justify-between">
+                    <Link
+                      to="/kasteel-ridderborn"
+                      className="text-sm text-primary underline-offset-4 hover:underline"
+                    >
+                      Ontdek het kasteel →
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setOpen(false)}
+                      aria-label="Sluiten"
+                      className="text-muted-foreground hover:text-foreground"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
