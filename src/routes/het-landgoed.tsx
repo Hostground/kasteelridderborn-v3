@@ -116,20 +116,20 @@ function HetLandgoedPage() {
             className="mx-auto w-full h-auto"
           />
           <div
-            className="absolute flex -translate-x-1/2 -translate-y-full flex-col items-center"
+            className="absolute h-0 w-0"
             style={{ left: "44.3%", top: "52.5%" }}
           >
             <span
               aria-hidden="true"
-              className="kaart-pin-ripple pointer-events-none absolute bottom-0 left-1/2 h-9 w-9 rounded-full border-2 border-primary/70"
+              className="kaart-pin-ripple pointer-events-none absolute h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary/70"
             />
             <span
               aria-hidden="true"
-              className="kaart-pin-ripple-delayed pointer-events-none absolute bottom-0 left-1/2 h-9 w-9 rounded-full border-2 border-primary/50"
+              className="kaart-pin-ripple-delayed pointer-events-none absolute h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary/50"
             />
             <svg
               viewBox="0 0 24 24"
-              className="kaart-pin-svg relative h-10 w-10 drop-shadow-[0_3px_6px_rgba(0,0,0,0.25)] md:h-12 md:w-12"
+              className="kaart-pin-svg absolute -translate-x-1/2 -translate-y-full h-10 w-10 drop-shadow-[0_3px_6px_rgba(0,0,0,0.25)] md:h-12 md:w-12"
               role="img"
               aria-label="Kasteel Ridderborn op de kaart"
             >
@@ -140,7 +140,7 @@ function HetLandgoedPage() {
               />
               <circle cx="12" cy="9" r="2.4" className="fill-background" />
             </svg>
-            <span className="mt-1 whitespace-nowrap rounded-full border border-border bg-background/90 px-3 py-1 font-display text-xs tracking-wide text-foreground shadow-sm backdrop-blur-sm md:text-sm">
+            <span className="absolute top-3 -translate-x-1/2 whitespace-nowrap rounded-full border border-border bg-background/90 px-3 py-1 font-display text-xs tracking-wide text-foreground shadow-sm backdrop-blur-sm md:text-sm">
               Kasteel Ridderborn
             </span>
           </div>
