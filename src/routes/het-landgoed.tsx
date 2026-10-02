@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { KaartPin } from "@/components/KaartPin";
 import { places } from "@/components/places";
 
 import kaart from "@/assets/brochure/ferrariskaart-vliermaal-1771.jpg.asset.json";
@@ -43,7 +43,6 @@ export const Route = createFileRoute("/het-landgoed")({
 });
 
 function HetLandgoedPage() {
-  const [open, setOpen] = useState(false);
   return (
     <div className="bg-background text-foreground">
       <Nav />
