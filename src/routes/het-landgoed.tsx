@@ -74,16 +74,77 @@ function HetLandgoedPage() {
         </div>
       </section>
 
+      <style>{`
+        @keyframes pin-drop {
+          0% { opacity: 0; transform: translateY(-36px); }
+          55% { opacity: 1; transform: translateY(5px); }
+          75% { transform: translateY(-3px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pin-bob {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-7px); }
+        }
+        @keyframes pin-ripple {
+          0% { transform: translate(-50%, -50%) scale(0.35); opacity: 0.75; }
+          70% { opacity: 0; }
+          100% { transform: translate(-50%, -50%) scale(1.9); opacity: 0; }
+        }
+        .kaart-pin-svg {
+          animation: pin-drop 0.9s ease-out both, pin-bob 3.2s ease-in-out 1s infinite;
+        }
+        .kaart-pin-ripple {
+          animation: pin-ripple 2.4s ease-out infinite;
+        }
+        .kaart-pin-ripple-delayed {
+          animation: pin-ripple 2.4s ease-out 1.2s infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .kaart-pin-svg, .kaart-pin-ripple, .kaart-pin-ripple-delayed {
+            animation: none;
+          }
+        }
+      `}</style>
       <section className="px-6 pb-8">
-        <img
-          src={kaart.url}
-          alt="Ferrariskaart van Vliermaal uit 1771, met het kasteel, de hoeve, akkers en beken in het landschap van Haspengouw."
-          loading="lazy"
-          width={1068}
-          height={742}
-          className="mx-auto w-full max-w-[92rem] h-auto"
-        />
-
+        <div className="relative mx-auto w-full max-w-[92rem]">
+          <img
+            src={kaart.url}
+            alt="Ferrariskaart van Vliermaal uit 1771, met het kasteel, de hoeve, akkers en beken in het landschap van Haspengouw."
+            loading="lazy"
+            width={1068}
+            height={742}
+            className="mx-auto w-full h-auto"
+          />
+          <div
+            className="absolute flex -translate-x-1/2 -translate-y-full flex-col items-center"
+            style={{ left: "44.3%", top: "52.5%" }}
+          >
+            <span
+              aria-hidden="true"
+              className="kaart-pin-ripple pointer-events-none absolute bottom-0 left-1/2 h-9 w-9 rounded-full border-2 border-primary/70"
+            />
+            <span
+              aria-hidden="true"
+              className="kaart-pin-ripple-delayed pointer-events-none absolute bottom-0 left-1/2 h-9 w-9 rounded-full border-2 border-primary/50"
+            />
+            <svg
+              viewBox="0 0 24 24"
+              className="kaart-pin-svg relative h-10 w-10 drop-shadow-[0_3px_6px_rgba(0,0,0,0.25)] md:h-12 md:w-12"
+              role="img"
+              aria-label="Kasteel Ridderborn op de kaart"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                className="fill-primary stroke-background"
+                strokeWidth="1.2"
+              />
+              <circle cx="12" cy="9" r="2.4" className="fill-background" />
+            </svg>
+            <span className="mt-1 whitespace-nowrap rounded-full border border-border bg-background/90 px-3 py-1 font-display text-xs tracking-wide text-foreground shadow-sm backdrop-blur-sm md:text-sm">
+              Kasteel Ridderborn
+            </span>
+          </div>
+        </div>
 
         <p className="mx-auto mt-6 max-w-[92rem] text-xs text-muted-foreground">
           De Ferrariskaart van Vliermaal (1771) — een historische landkaart,
