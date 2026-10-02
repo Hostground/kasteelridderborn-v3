@@ -9,61 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as AngelparkRouteImport } from './routes/angelpark'
-import { Route as AntwerpenRouteImport } from './routes/antwerpen'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as DeOranjerieRouteImport } from './routes/de-oranjerie'
-import { Route as DeOverzijdeRouteImport } from './routes/de-overzijde'
-import { Route as HetLandgoedRouteImport } from './routes/het-landgoed'
-import { Route as KasteelRidderbornRouteImport } from './routes/kasteel-ridderborn'
-import { Route as RidderboerenRouteImport } from './routes/ridderboeren'
-import { Route as ShabosRouteImport } from './routes/shabos'
 import { Route as WaterbergRouteImport } from './routes/waterberg'
+import { Route as ShabosRouteImport } from './routes/shabos'
+import { Route as RidderboerenRouteImport } from './routes/ridderboeren'
+import { Route as KasteelRidderbornRouteImport } from './routes/kasteel-ridderborn'
+import { Route as HetLandgoedRouteImport } from './routes/het-landgoed'
+import { Route as DeOverzijdeRouteImport } from './routes/de-overzijde'
+import { Route as DeOranjerieRouteImport } from './routes/de-oranjerie'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AntwerpenRouteImport } from './routes/antwerpen'
+import { Route as AngelparkRouteImport } from './routes/angelpark'
+import { Route as IndexRouteImport } from './routes/index'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AngelparkRoute = AngelparkRouteImport.update({
-  id: '/angelpark',
-  path: '/angelpark',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AntwerpenRoute = AntwerpenRouteImport.update({
-  id: '/antwerpen',
-  path: '/antwerpen',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DeOranjerieRoute = DeOranjerieRouteImport.update({
-  id: '/de-oranjerie',
-  path: '/de-oranjerie',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DeOverzijdeRoute = DeOverzijdeRouteImport.update({
-  id: '/de-overzijde',
-  path: '/de-overzijde',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HetLandgoedRoute = HetLandgoedRouteImport.update({
-  id: '/het-landgoed',
-  path: '/het-landgoed',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KasteelRidderbornRoute = KasteelRidderbornRouteImport.update({
-  id: '/kasteel-ridderborn',
-  path: '/kasteel-ridderborn',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RidderboerenRoute = RidderboerenRouteImport.update({
-  id: '/ridderboeren',
-  path: '/ridderboeren',
+const WaterbergRoute = WaterbergRouteImport.update({
+  id: '/waterberg',
+  path: '/waterberg',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ShabosRoute = ShabosRouteImport.update({
@@ -71,9 +31,49 @@ const ShabosRoute = ShabosRouteImport.update({
   path: '/shabos',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WaterbergRoute = WaterbergRouteImport.update({
-  id: '/waterberg',
-  path: '/waterberg',
+const RidderboerenRoute = RidderboerenRouteImport.update({
+  id: '/ridderboeren',
+  path: '/ridderboeren',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KasteelRidderbornRoute = KasteelRidderbornRouteImport.update({
+  id: '/kasteel-ridderborn',
+  path: '/kasteel-ridderborn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HetLandgoedRoute = HetLandgoedRouteImport.update({
+  id: '/het-landgoed',
+  path: '/het-landgoed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeOverzijdeRoute = DeOverzijdeRouteImport.update({
+  id: '/de-overzijde',
+  path: '/de-overzijde',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeOranjerieRoute = DeOranjerieRouteImport.update({
+  id: '/de-oranjerie',
+  path: '/de-oranjerie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AntwerpenRoute = AntwerpenRouteImport.update({
+  id: '/antwerpen',
+  path: '/antwerpen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AngelparkRoute = AngelparkRouteImport.update({
+  id: '/angelpark',
+  path: '/angelpark',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -175,67 +175,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/angelpark': {
-      id: '/angelpark'
-      path: '/angelpark'
-      fullPath: '/angelpark'
-      preLoaderRoute: typeof AngelparkRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/antwerpen': {
-      id: '/antwerpen'
-      path: '/antwerpen'
-      fullPath: '/antwerpen'
-      preLoaderRoute: typeof AntwerpenRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/de-oranjerie': {
-      id: '/de-oranjerie'
-      path: '/de-oranjerie'
-      fullPath: '/de-oranjerie'
-      preLoaderRoute: typeof DeOranjerieRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/de-overzijde': {
-      id: '/de-overzijde'
-      path: '/de-overzijde'
-      fullPath: '/de-overzijde'
-      preLoaderRoute: typeof DeOverzijdeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/het-landgoed': {
-      id: '/het-landgoed'
-      path: '/het-landgoed'
-      fullPath: '/het-landgoed'
-      preLoaderRoute: typeof HetLandgoedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kasteel-ridderborn': {
-      id: '/kasteel-ridderborn'
-      path: '/kasteel-ridderborn'
-      fullPath: '/kasteel-ridderborn'
-      preLoaderRoute: typeof KasteelRidderbornRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ridderboeren': {
-      id: '/ridderboeren'
-      path: '/ridderboeren'
-      fullPath: '/ridderboeren'
-      preLoaderRoute: typeof RidderboerenRouteImport
+    '/waterberg': {
+      id: '/waterberg'
+      path: '/waterberg'
+      fullPath: '/waterberg'
+      preLoaderRoute: typeof WaterbergRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/shabos': {
@@ -245,11 +189,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShabosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/waterberg': {
-      id: '/waterberg'
-      path: '/waterberg'
-      fullPath: '/waterberg'
-      preLoaderRoute: typeof WaterbergRouteImport
+    '/ridderboeren': {
+      id: '/ridderboeren'
+      path: '/ridderboeren'
+      fullPath: '/ridderboeren'
+      preLoaderRoute: typeof RidderboerenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kasteel-ridderborn': {
+      id: '/kasteel-ridderborn'
+      path: '/kasteel-ridderborn'
+      fullPath: '/kasteel-ridderborn'
+      preLoaderRoute: typeof KasteelRidderbornRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/het-landgoed': {
+      id: '/het-landgoed'
+      path: '/het-landgoed'
+      fullPath: '/het-landgoed'
+      preLoaderRoute: typeof HetLandgoedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/de-overzijde': {
+      id: '/de-overzijde'
+      path: '/de-overzijde'
+      fullPath: '/de-overzijde'
+      preLoaderRoute: typeof DeOverzijdeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/de-oranjerie': {
+      id: '/de-oranjerie'
+      path: '/de-oranjerie'
+      fullPath: '/de-oranjerie'
+      preLoaderRoute: typeof DeOranjerieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/antwerpen': {
+      id: '/antwerpen'
+      path: '/antwerpen'
+      fullPath: '/antwerpen'
+      preLoaderRoute: typeof AntwerpenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/angelpark': {
+      id: '/angelpark'
+      path: '/angelpark'
+      fullPath: '/angelpark'
+      preLoaderRoute: typeof AngelparkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
