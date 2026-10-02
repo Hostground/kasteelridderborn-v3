@@ -319,14 +319,17 @@ function LandgoedTeaser() {
           </Link>
         </div>
         <div className="lg:col-span-7">
-          <img
-            src={kaart.url}
-            alt="Ferrariskaart van Vliermaal uit 1771, met het kasteel, de hoeve, akkers en beken in het landschap van Haspengouw."
-            loading="lazy"
-            width={1068}
-            height={742}
-            className="w-full h-auto"
-          />
+          <div className="relative">
+            <img
+              src={kaart.url}
+              alt="Ferrariskaart van Vliermaal uit 1771, met het kasteel, de hoeve, akkers en beken in het landschap van Haspengouw."
+              loading="lazy"
+              width={1068}
+              height={742}
+              className="w-full h-auto"
+            />
+            <KaartPin />
+          </div>
         </div>
       </div>
       <div className="mx-auto max-w-[92rem] mt-16 text-center">
