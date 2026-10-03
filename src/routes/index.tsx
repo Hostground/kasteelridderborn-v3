@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { KaartPin } from "@/components/KaartPin";
 import { Chapters } from "@/components/Chapters";
 import type { ChapterData } from "@/components/Chapter";
 
