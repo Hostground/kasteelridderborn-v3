@@ -19,9 +19,9 @@ export function KaartPin() {
           100% { opacity: 1; transform: translateY(0); }
         }
         @keyframes pin-ripple {
-          0% { transform: translate(-50%, -50%) scale(0.35); opacity: 0.75; }
+          0% { transform: scale(0.35); opacity: 0.75; }
           70% { opacity: 0; }
-          100% { transform: translate(-50%, -50%) scale(1.9); opacity: 0; }
+          100% { transform: scale(1.9); opacity: 0; }
         }
         .kaart-pin-svg {
           animation: pin-drop 0.9s ease-out both;
