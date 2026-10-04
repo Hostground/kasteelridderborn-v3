@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 import { Wordmark } from "@/components/Wordmark";
@@ -9,6 +9,25 @@ export function Nav() {
   const [open, setOpen] = useState(false);
   const [placesOpen, setPlacesOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+
+  const openPlaces = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    setPlacesOpen(true);
+  };
+  const closePlacesSoon = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => setPlacesOpen(false), 180);
+  };
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setPlacesOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    };
+  }, []);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -55,8 +74,11 @@ export function Nav() {
           <button
             type="button"
             onClick={() => setPlacesOpen((v) => !v)}
+            onMouseEnter={openPlaces}
+            onMouseLeave={closePlacesSoon}
+            onFocus={openPlaces}
             aria-expanded={placesOpen}
-            className="uppercase tracking-[0.18em] hover:text-foreground transition-colors"
+            className={`uppercase tracking-[0.18em] hover:text-foreground transition-colors ${placesOpen ? "text-foreground" : ""}`}
           >
             De plekken
           </button>
@@ -77,25 +99,39 @@ export function Nav() {
       </div>
 
       {/* Desktop: rustig paneel met de werelden */}
-      {placesOpen && (
-        <div className="hidden md:block border-t border-border/50 bg-background/95 backdrop-blur-md">
-          <div className="mx-auto max-w-[92rem] px-6 py-10 grid grid-cols-4 gap-x-8 gap-y-6">
-            {places.map((p) => (
-              <Link
-                key={p.to}
-                to={p.to}
-                onClick={() => setPlacesOpen(false)}
-                className="group flex items-center gap-4 text-foreground/70 hover:text-foreground transition-colors"
-              >
-                <span className="h-8 w-8 shrink-0 text-primary/70 group-hover:text-primary transition-colors">
-                  <p.mark />
-                </span>
-                <span className="font-display text-lg">{p.label}</span>
-              </Link>
-            ))}
+      <div
+        onMouseEnter={openPlaces}
+        onMouseLeave={closePlacesSoon}
+        aria-hidden={!placesOpen}
+        className={`hidden md:grid transition-[grid-template-rows,opacity] duration-500 ease-out ${
+          placesOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="border-t border-border/50 bg-background/95 backdrop-blur-md">
+            <div
+              className={`mx-auto max-w-[92rem] px-6 py-10 grid grid-cols-4 gap-x-8 gap-y-6 transition-transform duration-500 ease-out ${
+                placesOpen ? "translate-y-0" : "-translate-y-2"
+              }`}
+            >
+              {places.map((p) => (
+                <Link
+                  key={p.to}
+                  to={p.to}
+                  tabIndex={placesOpen ? 0 : -1}
+                  onClick={() => setPlacesOpen(false)}
+                  className="group flex items-center gap-4 text-foreground/70 hover:text-foreground transition-colors"
+                >
+                  <span className="h-8 w-8 shrink-0 text-primary/70 group-hover:text-primary transition-colors">
+                    <p.mark />
+                  </span>
+                  <span className="font-display text-lg">{p.label}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      )}
+      </div>
 
       {/* Mobiel */}
       {open && (
