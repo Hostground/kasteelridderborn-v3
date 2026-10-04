@@ -18,17 +18,13 @@ export function KaartPin() {
           75% { transform: translateY(-3px); }
           100% { opacity: 1; transform: translateY(0); }
         }
-        @keyframes pin-bob {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-7px); }
-        }
         @keyframes pin-ripple {
           0% { transform: translate(-50%, -50%) scale(0.35); opacity: 0.75; }
           70% { opacity: 0; }
           100% { transform: translate(-50%, -50%) scale(1.9); opacity: 0; }
         }
         .kaart-pin-svg {
-          animation: pin-drop 0.9s ease-out both, pin-bob 3.2s ease-in-out 1s infinite;
+          animation: pin-drop 0.9s ease-out both;
         }
         .kaart-pin-ripple {
           animation: pin-ripple 2.4s ease-out infinite;
@@ -56,7 +52,7 @@ export function KaartPin() {
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           aria-label="Toon informatie over Kasteel Ridderborn"
-          className="group absolute -translate-x-1/2 -translate-y-full cursor-pointer focus:outline-none"
+          className="group absolute top-[3px] -translate-x-1/2 -translate-y-full cursor-pointer focus:outline-none md:top-1"
         >
           <svg
             viewBox="0 0 24 24"
