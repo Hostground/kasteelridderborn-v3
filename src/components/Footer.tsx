@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import avond from "@/assets/avond-landgoed.jpg";
+import avond from "@/assets/footer-angelpark.jpg";
 import { Wordmark } from "@/components/Wordmark";
 import { places } from "@/components/places";
 
@@ -10,10 +10,10 @@ export function Footer() {
       <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <img
           src={avond}
-          alt="Het landgoed bij avond: een wijde weide met oude bomen in silhouet en laaghangende nevel onder een blauw schemerlicht."
+          alt="Het kasteel bij schemering, weerspiegeld in de vijver, omlijst door donkere boomtakken."
           loading="lazy"
           width={1920}
-          height={1088}
+          height={1280}
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/45" />
