@@ -17,6 +17,7 @@ import { Route as DeOranjerieRouteImport } from './routes/de-oranjerie'
 import { Route as DeOverzijdeRouteImport } from './routes/de-overzijde'
 import { Route as HetLandgoedRouteImport } from './routes/het-landgoed'
 import { Route as KasteelRidderbornRouteImport } from './routes/kasteel-ridderborn'
+import { Route as OnsVerhaalRouteImport } from './routes/ons-verhaal'
 import { Route as RidderboerenRouteImport } from './routes/ridderboeren'
 import { Route as ShabosRouteImport } from './routes/shabos'
 import { Route as WaterbergRouteImport } from './routes/waterberg'
@@ -61,6 +62,11 @@ const KasteelRidderbornRoute = KasteelRidderbornRouteImport.update({
   path: '/kasteel-ridderborn',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OnsVerhaalRoute = OnsVerhaalRouteImport.update({
+  id: '/ons-verhaal',
+  path: '/ons-verhaal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RidderboerenRoute = RidderboerenRouteImport.update({
   id: '/ridderboeren',
   path: '/ridderboeren',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/de-overzijde': typeof DeOverzijdeRoute
   '/het-landgoed': typeof HetLandgoedRoute
   '/kasteel-ridderborn': typeof KasteelRidderbornRoute
+  '/ons-verhaal': typeof OnsVerhaalRoute
   '/ridderboeren': typeof RidderboerenRoute
   '/shabos': typeof ShabosRoute
   '/waterberg': typeof WaterbergRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByTo {
   '/de-overzijde': typeof DeOverzijdeRoute
   '/het-landgoed': typeof HetLandgoedRoute
   '/kasteel-ridderborn': typeof KasteelRidderbornRoute
+  '/ons-verhaal': typeof OnsVerhaalRoute
   '/ridderboeren': typeof RidderboerenRoute
   '/shabos': typeof ShabosRoute
   '/waterberg': typeof WaterbergRoute
@@ -113,6 +121,7 @@ export interface FileRoutesById {
   '/de-overzijde': typeof DeOverzijdeRoute
   '/het-landgoed': typeof HetLandgoedRoute
   '/kasteel-ridderborn': typeof KasteelRidderbornRoute
+  '/ons-verhaal': typeof OnsVerhaalRoute
   '/ridderboeren': typeof RidderboerenRoute
   '/shabos': typeof ShabosRoute
   '/waterberg': typeof WaterbergRoute
@@ -128,6 +137,7 @@ export interface FileRouteTypes {
     | '/de-overzijde'
     | '/het-landgoed'
     | '/kasteel-ridderborn'
+    | '/ons-verhaal'
     | '/ridderboeren'
     | '/shabos'
     | '/waterberg'
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/de-overzijde'
     | '/het-landgoed'
     | '/kasteel-ridderborn'
+    | '/ons-verhaal'
     | '/ridderboeren'
     | '/shabos'
     | '/waterberg'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/de-overzijde'
     | '/het-landgoed'
     | '/kasteel-ridderborn'
+    | '/ons-verhaal'
     | '/ridderboeren'
     | '/shabos'
     | '/waterberg'
@@ -168,6 +180,7 @@ export interface RootRouteChildren {
   DeOverzijdeRoute: typeof DeOverzijdeRoute
   HetLandgoedRoute: typeof HetLandgoedRoute
   KasteelRidderbornRoute: typeof KasteelRidderbornRoute
+  OnsVerhaalRoute: typeof OnsVerhaalRoute
   RidderboerenRoute: typeof RidderboerenRoute
   ShabosRoute: typeof ShabosRoute
   WaterbergRoute: typeof WaterbergRoute
@@ -231,6 +244,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KasteelRidderbornRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ons-verhaal': {
+      id: '/ons-verhaal'
+      path: '/ons-verhaal'
+      fullPath: '/ons-verhaal'
+      preLoaderRoute: typeof OnsVerhaalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ridderboeren': {
       id: '/ridderboeren'
       path: '/ridderboeren'
@@ -264,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   DeOverzijdeRoute: DeOverzijdeRoute,
   HetLandgoedRoute: HetLandgoedRoute,
   KasteelRidderbornRoute: KasteelRidderbornRoute,
+  OnsVerhaalRoute: OnsVerhaalRoute,
   RidderboerenRoute: RidderboerenRoute,
   ShabosRoute: ShabosRoute,
   WaterbergRoute: WaterbergRoute,
