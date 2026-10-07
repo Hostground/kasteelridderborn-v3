@@ -82,6 +82,9 @@ export function Nav() {
           >
             De plekken
           </button>
+          <Link to="/ons-verhaal" className="hover:text-foreground transition-colors">
+            Ons verhaal
+          </Link>
           <Link to="/contact" className="hover:text-foreground transition-colors">
             Contact
           </Link>
@@ -159,6 +162,13 @@ export function Nav() {
               </li>
             ))}
           </ul>
+          <Link
+            to="/ons-verhaal"
+            onClick={() => setOpen(false)}
+            className="block py-3 text-base border-b border-border/40"
+          >
+            Ons verhaal
+          </Link>
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
