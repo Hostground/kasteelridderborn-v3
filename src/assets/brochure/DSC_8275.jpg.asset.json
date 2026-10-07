@@ -1,1 +1,11 @@
-{"asset_id": "a1f2c3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d", "content_type": "image/jpeg", "created_at": "2026-10-01T07:22:00Z", "original_filename": "DSC_8275-scaled.jpg", "project_id": "fd3d006c-1ed0-4277-88c7-70740c42398a", "r2_key": "a/v1/fd3d006c-1ed0-4277-88c7-70740c42398a/a1f2c3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d/DSC_8275.jpg", "size": 1010616, "url": "/assets/brochure/DSC_8275.jpg", "version": 1}
+{
+  "asset_id": "a1f2c3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "content_type": "image/jpeg",
+  "created_at": "2026-10-01T07:22:00Z",
+  "original_filename": "DSC_8275-scaled.jpg",
+  "project_id": "b024b6e9-88ed-412b-b506-9d7186f4f7fd",
+  "r2_key": "a/v1/b024b6e9-88ed-412b-b506-9d7186f4f7fd/a1f2c3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d/DSC_8275-scaled.jpg",
+  "size": 1010616,
+  "url": "/assets/brochure/DSC_8275.jpg",
+  "version": 1
+}
