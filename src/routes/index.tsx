@@ -5,6 +5,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { KaartPin } from "@/components/KaartPin";
 import { Wordmark } from "@/components/Wordmark";
+import { RevealImage } from "@/components/RevealImage";
 
 import kaart from "@/assets/brochure/ferrariskaart-vliermaal-1771.jpg.asset.json";
 import kasteel from "@/assets/brochure/kasteel.jpg.asset.json";
@@ -270,7 +271,7 @@ function StorySection({ eyebrow, title, lead, paragraphs, img, alt, to, note }: 
   return (
     <section className="pb-24 md:pb-40">
       <figure className="overflow-hidden">
-        <img src={img} alt={alt} loading="lazy" className="h-[60svh] md:h-[86vh] w-full object-cover" />
+        <RevealImage src={img} alt={alt} loading="lazy" className="h-[60svh] md:h-[86vh] w-full object-cover" />
       </figure>
       <div className="mx-auto max-w-2xl px-6 pt-14 md:pt-20 text-center">
         <p className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground">{eyebrow}</p>
@@ -308,7 +309,7 @@ function OnsVerhaal() {
   return (
     <section className="py-24 md:py-40">
       <figure className="overflow-hidden">
-        <img
+        <RevealImage
           src={p3_2.url}
           alt="Een rustig pad door het park van Ridderborn."
           loading="lazy"
@@ -342,7 +343,7 @@ function Closing() {
   return (
     <section className="pb-24 md:pb-32">
       <figure className="overflow-hidden">
-        <img
+        <RevealImage
           src={avond}
           alt="Het landgoed in avondlicht."
           loading="lazy"
