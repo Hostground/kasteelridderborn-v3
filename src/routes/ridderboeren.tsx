@@ -92,6 +92,13 @@ function RendelbornPage() {
           <div className="lg:col-span-6">
             <SectionHeading eyebrow="Onze grond" title="Echte kwaliteit begint in" italic="het veld." />
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
+              Aan de overzijde van Ridderborn ligt de historische Kasteelhoeve
+              Rendelborn: circa 1.500 m² aan gebouwen, met akkers en weilanden
+              eromheen. We onderzoeken hoe landbouw op kleine schaal, lokale
+              voedselproductie, biodiversiteit en natuur elkaar kunnen versterken.
+              Niet terug naar vroeger. Wel opnieuw begrijpen wat de grond ons kan geven.
+            </p>
+            <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
               Bij Rendelborn geloven we dat echte kwaliteit begint in het veld. Onze
               boeren werken volgens organische principes, met respect voor bodem,
               biodiversiteit en het ritme van de seizoenen.

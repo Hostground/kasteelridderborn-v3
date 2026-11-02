@@ -71,8 +71,18 @@ function WaterbergPage() {
               een unieke plek waar erfgoed en hedendaagse kunst elkaar ontmoeten.
             </p>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Onderdeel van het bredere Ridderborn-ensemble: één landschap, vier
-              werelden.
+              Historische waterbekkens vormen er vier bijzondere ruimtes naast elkaar.
+              In het oudste gedeelte dragen gewelven een ruimte met een dunne laag
+              water; stapstenen leiden je erdoor, en licht en glas veranderen
+              voortdurend de sfeer. De jongere betonnen ruimtes hebben een totaal
+              ander karakter.
+            </p>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              En dan is er het geluid. Een stem, een instrument, een koor of een gong
+              krijgt hier door de natuurlijke galm een bijna onwerkelijke dimensie.
+            </p>
+            <p className="mt-6 font-display text-xl md:text-2xl">
+              Een plek die je eigenlijk moet horen om haar te begrijpen.
             </p>
           </div>
           <div className="lg:col-span-6">

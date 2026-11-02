@@ -74,6 +74,17 @@ function KasteelPage() {
               wie er ooit gewoond heeft. Wie door de poort komt, merkt vooral de rust.
             </p>
             <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted-foreground">
+              Het kasteel wordt omringd door een park met monumentale bomen, vijvers,
+              tuinen, een boomgaard en plekken die je pas tijdens een wandeling
+              ontdekt. Kunst en natuur lopen hier vanzelf in elkaar over: tussen het
+              groen staan sculpturen en objecten, op onverwachte plaatsen liggen
+              halfedelstenen en tussen de kiezels zijn duizenden kleine glazen hartjes
+              verscholen.
+            </p>
+            <p className="mt-8 font-display text-xl md:text-2xl">
+              Ridderborn wil niet alleen bekeken worden. Je moet het ontdekken.
+            </p>
+            <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted-foreground">
               Het kasteel en de omliggende gebouwen worden met zorg beheerd en
               onderhouden. Over het gebruik en de bestemming van de verschillende
               gebouwen zijn wij op dit moment in overleg met de bevoegde instanties.
