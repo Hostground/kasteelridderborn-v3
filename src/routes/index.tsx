@@ -80,7 +80,7 @@ const stories: Story[] = [
     lead: "Al eeuwen vormt Kasteel Ridderborn het hart van deze plek.",
     paragraphs: [
       "Het kasteel wordt omringd door een park met monumentale bomen, vijvers, tuinen, een boomgaard en bijzondere plekken die je vaak pas tijdens een wandeling ontdekt.",
-      "Tussen het groen staan sculpturen en objecten. Op onverwachte plaatsen liggen halfedelstenen, en tussen de kiezels zijn duizenden kleine glazen hartjes verscholen. Ridderborn wil niet alleen bekeken worden. Je moet het ontdekken.",
+      "Kunst en natuur lopen hier vanzelf in elkaar over. Tussen het groen staan sculpturen en objecten. Op onverwachte plaatsen liggen halfedelstenen, en tussen de kiezels zijn duizenden kleine glazen hartjes verscholen. Ridderborn wil niet alleen bekeken worden. Je moet het ontdekken.",
     ],
     img: kasteel.url,
     alt: "Kasteel Ridderborn in roodbruine baksteen met witte luiken, omgeven door weidse grasvelden en oude bomen.",
@@ -103,6 +103,7 @@ const stories: Story[] = [
     lead: "Midden in het groen ligt de Orangerie: een intieme plek voor ongeveer veertig mensen, met een eigen ingang en uitzicht op het park.",
     paragraphs: [
       "Voor momenten die ertoe doen: een huwelijk, een geboorte, een bijzondere ontmoeting, een lezing of kleine bijeenkomst, maar ook afscheid en herinnering.",
+      "Juist bij zulke momenten kan een mooie, rustige omgeving iets betekenen wat moeilijk in woorden is uit te drukken.",
     ],
     img: p5_1.url,
     alt: "Luchtfoto van de glazen oranjerie met koperglazen dak, temidden van het groene park met vijver.",
@@ -113,7 +114,8 @@ const stories: Story[] = [
     title: "Opnieuw begrijpen wat de grond ons kan geven",
     lead: "Aan de overzijde van Ridderborn ligt de historische Kasteelhoeve Rendelborn, met circa 1.500 m² aan gebouwen, akkers en weilanden.",
     paragraphs: [
-      "Hier komen landbouw, natuur en landschap weer dichter bij elkaar. We onderzoeken hoe kleinschalige landbouw, lokale voedselproductie, biodiversiteit en natuur elkaar kunnen versterken. Niet terug naar vroeger.",
+      "Hier komen landbouw, natuur en landschap weer dichter bij elkaar. We onderzoeken hoe kleinschalige landbouw, lokale voedselproductie, biodiversiteit en natuur elkaar kunnen versterken.",
+      "Niet terug naar vroeger. Wel opnieuw begrijpen wat de grond ons kan geven.",
     ],
     img: p18_1.url,
     alt: "Akker en hoeveland bij Kasteelhoeve Rendelborn in het zachte licht van de vroege ochtend.",
@@ -153,7 +155,7 @@ const stories: Story[] = [
     title: "Een verborgen wereld",
     lead: "Historische waterbekkens vormen er vier bijzondere ruimtes naast elkaar.",
     paragraphs: [
-      "In het oudste gedeelte dragen gewelven een ruimte met een dunne laag water. Stapstenen leiden je erdoor, en licht en glas veranderen voortdurend de sfeer. Een stem, een instrument of een gong krijgt hier door de natuurlijke galm een bijna onwerkelijke dimensie.",
+      "In het oudste gedeelte dragen gewelven een ruimte met een dunne laag water. Stapstenen leiden je erdoor, en licht en glas veranderen voortdurend de sfeer. Een stem, een instrument, een koor of een gong krijgt hier door de natuurlijke galm een bijna onwerkelijke dimensie.",
       "Een plek die je eigenlijk moet horen om haar te begrijpen.",
     ],
     img: p29_1.url,
@@ -261,6 +263,9 @@ function Opening() {
         </div>
         <p className="mt-10 font-display text-xl md:text-2xl">
           Verschillende plekken, maar samen één verhaal.
+        </p>
+        <p className="mt-6 font-display uppercase tracking-[0.28em] text-sm text-muted-foreground">
+          Ridderborn.
         </p>
       </div>
     </section>
