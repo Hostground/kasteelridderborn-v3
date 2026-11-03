@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import avond from "@/assets/footer-angelpark.jpg";
 import { Wordmark } from "@/components/Wordmark";
 import { places } from "@/components/places";
+import { ClosingLines } from "@/components/ClosingLines";
 
 const linkCls = "hover:text-foreground transition-colors duration-300";
 const mainPlaces = places.filter((p) => p.to !== "/antwerpen");
@@ -22,13 +23,7 @@ export function Footer() {
         <div className="absolute inset-0 bg-black/45" />
         <div className="relative px-6 text-center text-white">
           <Wordmark size="lg" className="drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)]" />
-          <p className="mt-10 font-display text-xl md:text-2xl leading-relaxed text-white/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.5)]">
-            Een plek om te ontdekken.
-            <br />
-            Een plek om te koesteren.
-            <br />
-            Een plek om door te geven.
-          </p>
+          <ClosingLines className="mt-10 font-display text-xl md:text-2xl leading-relaxed text-white/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.5)]" />
         </div>
       </div>
 
