@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -59,7 +60,7 @@ function ShabosPage() {
 
       {/* Hero */}
       <header className="relative min-h-[70vh] flex items-end overflow-hidden">
-        <img
+        <RevealImage
           src={page22.url}
           alt="Moderne witte woning aan de rand van een bos, weerspiegeld in een rustige vijver."
           className="absolute inset-0 h-full w-full object-cover brightness-105 contrast-110 saturate-110"
@@ -106,22 +107,22 @@ function ShabosPage() {
       {/* Galerij */}
       <section className="pb-24 md:pb-32 px-6">
         <div className="mx-auto max-w-7xl grid grid-cols-6 gap-3">
-          <img
+          <RevealImage
             src={p24_2.url}
             alt="Moderne houten woning met balkon, grote ramen en bomen rondom."
             className="col-span-6 md:col-span-4 aspect-[4/3] object-cover w-full rounded-xl"
           />
-          <img
+          <RevealImage
             src={p23_2.url}
             alt="Moderne witte woning tussen de bomen bij Shabos, omringd door park en bosrand."
             className="col-span-6 md:col-span-2 aspect-[4/3] object-cover w-full rounded-xl"
           />
-          <img
+          <RevealImage
             src={p23_1.url}
             alt="Buitenaanzicht van een wit huis met grindplein en boomstronken."
             className="col-span-3 aspect-square object-cover w-full rounded-xl"
           />
-          <img
+          <RevealImage
             src={p23_3.url}
             alt="Interieur van een houten cabin met deur, kasten en een kleurrijk patroon kussen."
             className="col-span-3 aspect-square object-cover w-full rounded-xl"
@@ -131,7 +132,7 @@ function ShabosPage() {
 
       {/* CTA */}
       <section className="relative py-24 px-6 overflow-hidden">
-        <img
+        <RevealImage
           src={p24_1.url}
           alt="Verblijf in het groen bij Shabos."
           className="absolute inset-0 h-full w-full object-cover"

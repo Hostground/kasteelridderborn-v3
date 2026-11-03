@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
@@ -85,7 +86,7 @@ function ContactPage() {
                 key={l.title}
                 className="flex gap-5 items-center rounded-xl overflow-hidden border border-border bg-card p-4"
               >
-                <img
+                <RevealImage
                   src={l.img.url}
                   alt={l.title}
                   className="h-20 w-28 object-cover rounded-lg shrink-0"

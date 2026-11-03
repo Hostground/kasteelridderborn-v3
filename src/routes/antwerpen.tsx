@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -37,7 +38,7 @@ function AntwerpenPage() {
       <Nav />
 
       <header className="relative h-[86svh] flex items-center justify-center overflow-hidden">
-        <img
+        <RevealImage
           src={p15_1.url}
           alt="Sober landschap met een abstracte stenen sculptuur en een historisch bakstenen gebouw op de achtergrond."
           className="absolute inset-0 h-full w-full object-cover"

@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -37,7 +38,7 @@ function KasteelPage() {
       <Nav />
 
       <header className="relative h-[86svh] flex items-center justify-center overflow-hidden">
-        <img
+        <RevealImage
           src={kasteel.url}
           alt="Kasteel Ridderborn in roodbruine baksteen met witte luiken, omgeven door wijde grasvelden en oude bomen."
           className="absolute inset-0 h-full w-full object-cover"
@@ -62,7 +63,7 @@ function KasteelPage() {
 
       <section className="px-6 pb-24 md:pb-36">
         <div className="mx-auto max-w-[92rem] grid md:grid-cols-12 gap-12 items-center">
-          <img
+          <RevealImage
             src={p15_1.url}
             alt="Het kasteel in de winter, met een abstracte stenen sculptuur in het besneeuwde park."
             loading="lazy"

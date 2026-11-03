@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -30,7 +31,7 @@ function OnsVerhaalPage() {
     <div className="bg-background text-foreground">
       <Nav />
       <figure className="overflow-hidden">
-        <img
+        <RevealImage
           src={p3_2.url}
           alt="Een rustig pad door het park van Ridderborn."
           className="h-[70svh] md:h-[86vh] w-full object-cover"

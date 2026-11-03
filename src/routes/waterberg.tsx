@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -41,7 +42,7 @@ function WaterbergPage() {
 
       {/* Hero */}
       <header className="relative min-h-[70vh] flex items-end overflow-hidden">
-        <img
+        <RevealImage
           src={p29_1.url}
           alt="Interieur van een waterbunker met bakstenen gewelven en bogen, deels ondergelopen met water."
           className="absolute inset-0 h-full w-full object-cover"
@@ -86,7 +87,7 @@ function WaterbergPage() {
             </p>
           </div>
           <div className="lg:col-span-6">
-            <img
+            <RevealImage
               src={p5_2.url}
               alt="Landschap rond de Waterberg in Berg, Tongeren – Borgloon."
               className="aspect-[4/3] object-cover w-full rounded-xl"

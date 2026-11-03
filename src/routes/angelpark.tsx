@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -95,7 +96,7 @@ function AngelparkPage() {
 
       {/* Hero */}
       <header className="relative min-h-[70vh] flex items-end overflow-hidden">
-        <img
+        <RevealImage
           src={p3_1.url}
           alt="Een zonovergoten bospad bij zonsondergang in Angelpark."
           className="absolute inset-0 h-full w-full object-cover"
@@ -174,17 +175,17 @@ function AngelparkPage() {
       {/* Galerij */}
       <section className="pb-24 md:pb-32 px-6">
         <div className="mx-auto max-w-7xl grid grid-cols-6 gap-3">
-          <img
+          <RevealImage
             src={p12_1.url}
             alt="Groep mensen in een kring buiten, in gesprek in een natuurlijke omgeving."
             className="col-span-6 md:col-span-3 aspect-[4/3] object-cover w-full rounded-xl"
           />
-          <img
+          <RevealImage
             src={p12_2.url}
             alt="Stenen boog van een ruïne in een bos, omringd door herfstbladeren."
             className="col-span-3 md:col-span-2 aspect-[4/3] object-cover w-full rounded-xl"
           />
-          <img
+          <RevealImage
             src={p3_2.url}
             alt="Een cluster paddenstoelen groeit op een bemoste boomstronk."
             className="col-span-3 md:col-span-1 aspect-[4/3] object-cover w-full rounded-xl"
