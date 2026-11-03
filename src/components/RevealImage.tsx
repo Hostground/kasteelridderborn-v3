@@ -35,8 +35,8 @@ export function RevealImage({ className, ...props }: ImgHTMLAttributes<HTMLImage
       {...props}
       className={cn(
         className,
-        state !== "static" && "transition-[opacity,scale] duration-[1600ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
-        state === "hidden" && "opacity-0 scale-[1.06]",
+        state !== "static" && "transition-[opacity,scale] duration-[3400ms] ease-[cubic-bezier(0.25,0.6,0.3,1)]",
+        state === "hidden" && "opacity-0 scale-[1.03]",
         state === "shown" && "opacity-100 scale-100",
       )}
     />
