@@ -23,7 +23,7 @@ export const places: Place[] = [
   { label: "AngelPark", to: "/angelpark", mark: MarkAngelpark },
   { label: "De Orangerie", to: "/de-oranjerie", mark: MarkOranjerie },
   { label: "Kasteelhoeve Rendelborn", to: "/ridderboeren", mark: MarkRendelborn },
-  { label: "Landschap & natuur", to: "/de-overzijde", mark: MarkOverzijde },
+  { label: "Landschap & natuur (De Overzijde)", to: "/de-overzijde", mark: MarkOverzijde },
   { label: "Shabos", to: "/shabos", mark: MarkShabos },
   { label: "Waterberg", to: "/waterberg", mark: MarkWaterberg },
   { label: "Antwerpen — Venue Fourteen", to: "/antwerpen", mark: MarkAntwerpen },
