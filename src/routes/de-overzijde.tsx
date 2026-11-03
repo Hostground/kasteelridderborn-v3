@@ -38,7 +38,7 @@ function DeOverzijdePage() {
       <Nav />
 
       <header className="relative min-h-[80vh] flex items-end overflow-hidden">
-        <img
+        <RevealImage
           src={overzijdeHero.url}
           alt="Stil weidelandschap bij zonsopgang met ochtendnevel en een smal pad dat tussen hoge bomen wegloopt."
           className="absolute inset-0 h-full w-full object-cover"

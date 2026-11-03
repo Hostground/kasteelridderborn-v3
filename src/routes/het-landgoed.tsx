@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -48,7 +49,7 @@ function HetLandgoedPage() {
       <Nav />
 
       <header className="relative h-[80svh] flex items-center justify-center overflow-hidden">
-        <img
+        <RevealImage
           src={kasteel.url}
           alt="Het landgoed Ridderborn met wijde grasvelden, oude bomen en het kasteel in de verte."
           className="absolute inset-0 h-full w-full object-cover"
@@ -77,7 +78,7 @@ function HetLandgoedPage() {
 
       <section className="px-6 pb-8">
         <div className="relative mx-auto w-full max-w-[92rem]">
-          <img
+          <RevealImage
             src={kaart.url}
             alt="Ferrariskaart van Vliermaal uit 1771, met het kasteel, de hoeve, akkers en beken in het landschap van Haspengouw."
             loading="lazy"

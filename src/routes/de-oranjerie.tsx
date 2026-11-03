@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -51,7 +52,7 @@ function OranjeriePage() {
       <Nav />
 
       <header className="relative h-[86svh] flex items-center justify-center overflow-hidden">
-        <img
+        <RevealImage
           src={o1.url}
           alt="De Oranjerie op het domein van Kasteel Ridderborn, gelegen in het parklandschap."
           className="absolute inset-0 h-full w-full object-cover"
@@ -90,13 +91,13 @@ function OranjeriePage() {
 
       <section className="px-6 pb-24 md:pb-36">
         <div className="mx-auto max-w-[92rem] grid gap-4 md:grid-cols-2">
-          <img
+          <RevealImage
             src={o2.url}
             alt="Interieur van de Oranjerie met veel natuurlijk licht."
             loading="lazy"
             className="w-full h-[50vh] md:h-[64vh] object-cover"
           />
-          <img
+          <RevealImage
             src={o3.url}
             alt="Zicht op de ruime opstelling in de Oranjerie."
             loading="lazy"
@@ -139,19 +140,19 @@ function OranjeriePage() {
 
       <section className="px-6 pb-28 md:pb-40">
         <div className="mx-auto max-w-[92rem] grid gap-4 md:grid-cols-3">
-          <img
+          <RevealImage
             src={o4.url}
             alt="Detail van de kunsttentoonstelling in de Oranjerie."
             loading="lazy"
             className="w-full h-[42vh] md:h-[52vh] object-cover"
           />
-          <img
+          <RevealImage
             src={o5.url}
             alt="De Oranjerie vanuit het park gezien."
             loading="lazy"
             className="w-full h-[42vh] md:h-[52vh] object-cover"
           />
-          <img
+          <RevealImage
             src={o6.url}
             alt="Het park rond de Oranjerie met bijzondere boomsoorten."
             loading="lazy"

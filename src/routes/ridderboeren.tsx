@@ -1,3 +1,4 @@
+import { RevealImage } from "@/components/RevealImage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
@@ -68,7 +69,7 @@ function RendelbornPage() {
 
       {/* Hero */}
       <header className="relative min-h-[70vh] flex items-end overflow-hidden">
-        <img
+        <RevealImage
           src={p16_1.url}
           alt="Hand met een bos vers geoogste, met aarde bedekte wortels."
           className="absolute inset-0 h-full w-full object-cover"
@@ -118,7 +119,7 @@ function RendelbornPage() {
               <Stat value="9 ha" label="Park en bos rond Ridderborn" />
               <Stat value="16 ha" label="Graslanden aan De Overzijde" />
             </div>
-            <img
+            <RevealImage
               src={p18_1.url}
               alt="Groenteteelt en veldstructuur op Landgoed Ridderborn."
               className="mt-8 aspect-[16/9] object-cover w-full rounded-xl"
@@ -142,17 +143,17 @@ function RendelbornPage() {
       {/* Galerij */}
       <section className="pb-24 md:pb-32 px-6">
         <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-3 gap-3">
-          <img
+          <RevealImage
             src={p19_1.url}
             alt="Vers geoogste snijbiet met levendige groene bladeren en roze stelen."
             className="aspect-square object-cover w-full rounded-xl"
           />
-          <img
+          <RevealImage
             src={p21_1.url}
             alt="Vers geoogste groenten en ingemaakte producten in een winkel."
             className="aspect-square object-cover w-full rounded-xl"
           />
-          <img
+          <RevealImage
             src={p21_2.url}
             alt="Streekproducten van Rendelborn."
             className="col-span-2 md:col-span-1 aspect-square object-cover w-full rounded-xl"
