@@ -36,7 +36,7 @@ export function Footer() {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="pointer-events-none absolute -right-16 bottom-16 hidden w-[440px] opacity-[0.14] lg:block"
+          className="pointer-events-none absolute -right-16 bottom-16 hidden w-[440px] opacity-[0.14] lg:block [mask-image:radial-gradient(closest-side,black_55%,transparent)]"
         />
         <div className="relative mx-auto max-w-6xl">
           <div className="text-center">
@@ -51,7 +51,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-12 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-4">
+          <div className="mt-20 grid gap-12 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-[0.9fr_1.4fr_0.9fr_1.4fr]">
             <div>
               <h3 className={headCls}>Het landgoed</h3>
               <ul className={listCls}>
