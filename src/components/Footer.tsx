@@ -8,7 +8,7 @@ import kaart from "@/assets/brochure/ferrariskaart-vliermaal-1771.jpg.asset.json
 
 const linkCls = "hover:text-foreground transition-colors duration-300";
 const headCls = "text-[0.68rem] uppercase tracking-[0.28em] text-foreground";
-const listCls = "mt-6 space-y-3 font-display text-lg text-muted-foreground";
+const listCls = "mt-6 space-y-3 font-display text-base xl:text-lg text-muted-foreground";
 const mainPlaces = places.filter((p) => p.to !== "/antwerpen");
 
 export function Footer() {
@@ -36,7 +36,8 @@ export function Footer() {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="pointer-events-none absolute -right-16 bottom-16 hidden w-[440px] opacity-[0.14] lg:block [mask-image:radial-gradient(closest-side,black_55%,transparent)]"
+          className="pointer-events-none absolute -right-16 bottom-16 hidden w-[440px] opacity-[0.14] lg:block"
+          style={{ maskImage: "radial-gradient(closest-side, black 50%, transparent)", WebkitMaskImage: "radial-gradient(closest-side, black 50%, transparent)" }}
         />
         <div className="relative mx-auto max-w-6xl">
           <div className="text-center">
@@ -51,7 +52,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-12 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-[0.9fr_1.4fr_0.9fr_1.4fr]">
+          <div className="mt-20 grid lg:gap-x-8 gap-12 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-4">
             <div>
               <h3 className={headCls}>Het landgoed</h3>
               <ul className={listCls}>
