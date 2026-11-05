@@ -36,9 +36,21 @@ export function Footer() {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="pointer-events-none absolute -right-16 bottom-16 hidden w-[440px] opacity-[0.14] lg:block"
-          style={{ maskImage: "radial-gradient(closest-side, black 50%, transparent)", WebkitMaskImage: "radial-gradient(closest-side, black 50%, transparent)" }}
+          className="pointer-events-none absolute -right-10 bottom-24 hidden w-[460px] opacity-45 mix-blend-multiply sepia-[0.6] lg:block"
+          style={{ maskImage: "radial-gradient(closest-side, black 68%, transparent)", WebkitMaskImage: "radial-gradient(closest-side, black 68%, transparent)" }}
         />
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 40 40"
+          className="pointer-events-none absolute right-16 bottom-[26rem] hidden h-12 w-12 text-muted-foreground/70 lg:block"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="0.6"
+        >
+          <circle cx="20" cy="20" r="9" />
+          <path d="M20 4 L22 18 L20 20 L18 18 Z M20 36 L22 22 L20 20 L18 22 Z M4 20 L18 18 L20 20 L18 22 Z M36 20 L22 18 L20 20 L22 22 Z" fill="currentColor" fillOpacity="0.25" />
+          <text x="20" y="3" fontSize="3.5" textAnchor="middle" fill="currentColor" stroke="none">N</text>
+        </svg>
         <div className="relative mx-auto max-w-6xl">
           <div className="text-center">
             <p className="font-display text-5xl md:text-6xl text-foreground">Ridderborn</p>
