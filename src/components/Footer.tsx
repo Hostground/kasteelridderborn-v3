@@ -4,8 +4,11 @@ import avond from "@/assets/footer-angelpark.jpg";
 import { Wordmark } from "@/components/Wordmark";
 import { places } from "@/components/places";
 import { ClosingLines } from "@/components/ClosingLines";
+import kaart from "@/assets/brochure/ferrariskaart-vliermaal-1771.jpg.asset.json";
 
 const linkCls = "hover:text-foreground transition-colors duration-300";
+const headCls = "text-[0.68rem] uppercase tracking-[0.28em] text-foreground";
+const listCls = "mt-6 space-y-3 font-display text-lg text-muted-foreground";
 const mainPlaces = places.filter((p) => p.to !== "/antwerpen");
 
 export function Footer() {
@@ -27,35 +30,64 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border/60 px-6 pt-20 pb-10">
-        <div className="mx-auto max-w-6xl grid gap-14 sm:grid-cols-2 md:grid-cols-3">
-          <div>
-            <h3 className="text-[0.7rem] uppercase tracking-[0.22em] text-foreground">Ridderborn</h3>
-            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-              <li><Link to="/het-landgoed" className={linkCls}>Het Landgoed</Link></li>
-              <li><Link to="/ons-verhaal" className={linkCls}>Ons verhaal</Link></li>
-              <li><Link to="/contact" className={linkCls}>Contact</Link></li>
-            </ul>
-            <p className="mt-6 text-sm text-muted-foreground/80">Haspengouw, België</p>
+      <div className="relative overflow-hidden px-6 pt-24 pb-10">
+        <img
+          src={kaart.url}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="pointer-events-none absolute -right-16 bottom-16 hidden w-[440px] opacity-[0.14] lg:block"
+        />
+        <div className="relative mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="font-display text-5xl md:text-6xl text-foreground">Ridderborn</p>
+            <p className="mt-4 font-display italic text-lg text-muted-foreground">
+              Een bijzondere plek in het hart van Haspengouw
+            </p>
+            <div className="mt-8 flex items-center justify-center gap-4 text-accent" aria-hidden="true">
+              <span className="h-px w-24 bg-accent/50" />
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 0 L8.6 5.4 L14 7 L8.6 8.6 L7 14 L5.4 8.6 L0 7 L5.4 5.4 Z" /></svg>
+              <span className="h-px w-24 bg-accent/50" />
+            </div>
           </div>
-          <div>
-            <h3 className="text-[0.7rem] uppercase tracking-[0.22em] text-foreground">De plekken</h3>
-            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-              {mainPlaces.map((p) => (
-                <li key={p.to}><Link to={p.to} className={linkCls}>{p.label}</Link></li>
-              ))}
-            </ul>
+
+          <div className="mt-20 grid gap-12 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-4">
+            <div>
+              <h3 className={headCls}>Het landgoed</h3>
+              <ul className={listCls}>
+                <li><Link to="/het-landgoed" className={linkCls}>Het Landgoed</Link></li>
+                <li><Link to="/ons-verhaal" className={linkCls}>Ons verhaal</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className={headCls}>De plekken</h3>
+              <ul className={listCls}>
+                {mainPlaces.map((p) => (
+                  <li key={p.to}><Link to={p.to} className={linkCls}>{p.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className={headCls}>Bezoek</h3>
+              <ul className={listCls}>
+                <li>Vliermaal</li>
+                <li>Haspengouw, België</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className={headCls}>Contact</h3>
+              <ul className={listCls}>
+                <li><a href="mailto:hello@kasteelhoeveridderborn.com" className={linkCls}>hello@kasteelhoeveridderborn.com</a></li>
+                <li><Link to="/contact" className={linkCls}>Contactpagina</Link></li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h3 className="text-[0.7rem] uppercase tracking-[0.22em] text-foreground">Verbonden</h3>
-            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-              <li><Link to="/antwerpen" className={linkCls}>Antwerpen — Venue Fourteen</Link></li>
-            </ul>
+
+          <div className="mt-24 flex flex-col items-center gap-3 border-t border-border/60 pt-8 text-xs tracking-[0.12em] text-muted-foreground sm:flex-row sm:justify-between">
+            <p>© {new Date().getFullYear()} Ridderborn — Angelica &amp; John</p>
+            <Link to="/antwerpen" className={linkCls}>Antwerpen — Venue Fourteen</Link>
           </div>
         </div>
-        <p className="mx-auto mt-20 max-w-6xl border-t border-border/40 pt-8 text-center text-xs text-muted-foreground/80">
-          © {new Date().getFullYear()} Ridderborn — Angelica &amp; John
-        </p>
       </div>
     </footer>
   );
