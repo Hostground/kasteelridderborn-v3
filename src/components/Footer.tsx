@@ -78,7 +78,7 @@ export function Footer() {
             <div>
               <h3 className={headCls}>Contact</h3>
               <ul className={listCls}>
-                <li><a href="mailto:hello@kasteelhoeveridderborn.com" className={linkCls}>hello@kasteelhoeveridderborn.com</a></li>
+                <li><a href="mailto:hello@kasteelhoeveridderborn.com" className={`${linkCls} text-base`}>hello@kasteelhoeveridderborn.com</a></li>
                 <li><Link to="/contact" className={linkCls}>Contactpagina</Link></li>
               </ul>
             </div>
