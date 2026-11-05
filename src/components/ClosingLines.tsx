@@ -36,9 +36,9 @@ export function ClosingLines({ className }: { className?: string }) {
           key={line}
           className={cn(
             "block",
-            state !== "static" &&
+            state === "shown" &&
               "transition-[opacity,translate,filter] duration-[1800ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
-            state !== "static" && delays[i],
+            state === "shown" && delays[i],
             state === "hidden" && "opacity-0 translate-y-3 blur-sm",
             state === "shown" && "opacity-100 translate-y-0 blur-0",
           )}
