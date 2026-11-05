@@ -101,10 +101,10 @@ function ContactPage() {
             <div className="rounded-xl border border-border bg-secondary/40 p-6">
               <h3 className="font-display text-xl text-primary">Liever rechtstreeks?</h3>
               <a
-                href="mailto:hello@ridderborn.be"
+                href="mailto:hello@kasteelhoeveridderborn.com"
                 className="mt-2 inline-block text-sm text-foreground underline decoration-accent underline-offset-4 hover:text-primary transition-colors"
               >
-                hello@ridderborn.be
+                hello@kasteelhoeveridderborn.com
               </a>
             </div>
           </div>
@@ -163,7 +163,7 @@ function ContactForm() {
         (window as unknown as { turnstile?: { reset: () => void } }).turnstile?.reset();
       }
     } catch {
-      setErrorMsg("Verzenden mislukt. Mail ons rechtstreeks via hello@ridderborn.be.");
+      setErrorMsg("Verzenden mislukt. Mail ons rechtstreeks via hello@kasteelhoeveridderborn.com.");
       setStatus("error");
     }
   }

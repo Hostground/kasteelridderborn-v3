@@ -53,13 +53,13 @@ Het formulier op `/contact` post naar `contact.php`. Open dat bestand en pas
 bovenaan de instellingen aan:
 
 ```php
-'to'   => 'hello@ridderborn.be',   // ontvanger
-'from' => 'no-reply@ridderborn.be',// afzender op je eigen domein
+'to'   => 'hello@kasteelhoeveridderborn.com',   // ontvanger
+'from' => 'no-reply@kasteelhoeveridderborn.com',// afzender op je eigen domein
 'smtp' => [
-  'host'   => 'mail.ridderborn.be', // leeg laten = via cPanel mail()
+  'host'   => 'mail.kasteelhoeveridderborn.com', // leeg laten = via cPanel mail()
   'port'   => 587,                  // 587 = STARTTLS, 465 = SSL
   'secure' => 'tls',                // 'tls' | 'ssl' | ''
-  'user'   => 'no-reply@ridderborn.be',
+  'user'   => 'no-reply@kasteelhoeveridderborn.com',
   'pass'   => 'wachtwoord-van-de-mailbox',
 ],
 ```

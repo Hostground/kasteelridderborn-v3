@@ -15,19 +15,19 @@
 // ===== Instellingen =====
 $config = [
     // Ontvanger
-    'to'        => 'hello@ridderborn.be',
+    'to'        => 'hello@kasteelhoeveridderborn.com',
     'to_name'   => 'Landgoed Rendelborn',
 
     // Afzender (moet een adres op je eigen domein zijn)
-    'from'      => 'no-reply@ridderborn.be',
+    'from'      => 'no-reply@kasteelhoeveridderborn.com',
     'from_name' => 'Rendelborn website',
 
     // SMTP — laat 'host' leeg ('') om mail() van cPanel te gebruiken
     'smtp' => [
-        'host'    => '',                  // bv. 'mail.ridderborn.be'
+        'host'    => '',                  // bv. 'mail.kasteelhoeveridderborn.com'
         'port'    => 587,                 // 587 = STARTTLS, 465 = SSL, 25 = geen encryptie
         'secure'  => 'tls',               // 'tls' | 'ssl' | ''
-        'user'    => '',                  // bv. 'no-reply@ridderborn.be'
+        'user'    => '',                  // bv. 'no-reply@kasteelhoeveridderborn.com'
         'pass'    => '',                  // wachtwoord van de mailbox
         'timeout' => 15,
     ],
