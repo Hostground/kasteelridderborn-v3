@@ -42,7 +42,7 @@ export function Footer() {
         <svg
           aria-hidden="true"
           viewBox="0 0 40 40"
-          className="pointer-events-none absolute right-16 bottom-[26rem] hidden h-12 w-12 text-muted-foreground/70 lg:block"
+          className="pointer-events-none absolute right-10 bottom-[19rem] hidden h-12 w-12 text-muted-foreground/70 lg:block"
           fill="none"
           stroke="currentColor"
           strokeWidth="0.6"
