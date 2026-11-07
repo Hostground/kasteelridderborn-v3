@@ -36,13 +36,13 @@ export function Footer() {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="pointer-events-none absolute -right-10 bottom-24 hidden w-[460px] opacity-45 mix-blend-multiply sepia-[0.6] lg:block"
-          style={{ maskImage: "radial-gradient(closest-side, black 68%, transparent)", WebkitMaskImage: "radial-gradient(closest-side, black 68%, transparent)" }}
+          className="pointer-events-none absolute right-0 bottom-0 hidden w-[420px] xl:w-[480px] opacity-[0.28] mix-blend-multiply sepia-[0.55] lg:block"
+          style={{ maskImage: "radial-gradient(120% 110% at 100% 100%, black 25%, transparent 72%)", WebkitMaskImage: "radial-gradient(120% 110% at 100% 100%, black 25%, transparent 72%)" }}
         />
         <svg
           aria-hidden="true"
           viewBox="0 0 40 40"
-          className="pointer-events-none absolute right-10 bottom-[19rem] hidden h-12 w-12 text-muted-foreground/70 lg:block"
+          className="pointer-events-none absolute right-16 bottom-[19rem] hidden h-10 w-10 text-muted-foreground/60 lg:block"
           fill="none"
           stroke="currentColor"
           strokeWidth="0.6"
