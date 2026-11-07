@@ -4,7 +4,7 @@ import avond from "@/assets/footer-angelpark.jpg";
 import { Wordmark } from "@/components/Wordmark";
 import { places } from "@/components/places";
 import { ClosingLines } from "@/components/ClosingLines";
-import kaart from "@/assets/brochure/ferrariskaart-vliermaal-1771.jpg.asset.json";
+import kaart from "@/assets/brochure/landgoed-schets.jpg.asset.json";
 
 const linkCls = "hover:text-foreground transition-colors duration-300";
 const headCls = "text-[0.68rem] uppercase tracking-[0.28em] text-foreground";
@@ -36,7 +36,7 @@ export function Footer() {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="pointer-events-none absolute right-0 bottom-20 hidden w-[520px] opacity-50 mix-blend-multiply sepia-[0.5] lg:block"
+          className="pointer-events-none absolute right-0 bottom-20 hidden w-[600px] opacity-40 mix-blend-multiply lg:block"
           style={{ maskImage: "radial-gradient(ellipse 75% 80% at 72% 60%, black 35%, transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 75% 80% at 72% 60%, black 35%, transparent 100%)" }}
         />
         <svg
