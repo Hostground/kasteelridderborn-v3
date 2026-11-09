@@ -12,7 +12,6 @@ import overzijdeHero from "@/assets/brochure/overzijde-hero.jpg.asset.json";
 import page22 from "@/assets/brochure/page_22.jpg.asset.json";
 import p3_1 from "@/assets/brochure/p3_1.jpg.asset.json";
 import p5_1 from "@/assets/brochure/DSC_8275.jpg.asset.json";
-import p3_2 from "@/assets/brochure/p3_2.jpg.asset.json";
 import p18_1 from "@/assets/brochure/p18_1.jpg.asset.json";
 import p29_1 from "@/assets/brochure/p29_1.jpg.asset.json";
 
