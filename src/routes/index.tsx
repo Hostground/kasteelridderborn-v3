@@ -4,7 +4,6 @@ import type { CSSProperties } from "react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { KaartPin } from "@/components/KaartPin";
-import { Wordmark } from "@/components/Wordmark";
 import { RevealImage } from "@/components/RevealImage";
 
 import kaart from "@/assets/brochure/ferrariskaart-vliermaal-1771.jpg.asset.json";
@@ -174,7 +173,6 @@ function Index() {
         <StorySection key={s.eyebrow} {...s} />
       ))}
       <LandgoedTeaser />
-      <OnsVerhaal />
       <Closing />
       <Footer />
     </div>
@@ -310,39 +308,6 @@ function StorySection({ eyebrow, title, lead, paragraphs, img, alt, to, note }: 
   );
 }
 
-function OnsVerhaal() {
-  return (
-    <section className="py-24 md:py-40">
-      <figure className="overflow-hidden">
-        <RevealImage
-          src={p3_2.url}
-          alt="Een rustig pad door het park van Ridderborn."
-          loading="lazy"
-          className="h-[50svh] md:h-[70vh] w-full object-cover"
-        />
-      </figure>
-      <div className="mx-auto max-w-2xl px-6 pt-14 md:pt-20 text-center">
-        <p className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground">Ons verhaal</p>
-        <h2 className="font-display mt-5 text-3xl md:text-5xl leading-[1.1]">
-          Meer dan twintig jaar Ridderborn
-        </h2>
-        <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-          Al meer dan twintig jaar is Ridderborn ons thuis. Soms groot, vaak heel
-          klein: een tuin, een boom, een kunstwerk, een gebouw dat opnieuw een functie
-          krijgt. Zo is Ridderborn langzaam geworden wat het vandaag is. En nog steeds
-          is het niet af.
-        </p>
-        <p className="mt-8 font-display text-xl">Angelica &amp; John</p>
-        <Link
-          to="/ons-verhaal"
-          className="mt-10 inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] border-b border-foreground/25 pb-2 hover:border-foreground transition-colors"
-        >
-          Lees ons verhaal <span aria-hidden="true">→</span>
-        </Link>
-      </div>
-    </section>
-  );
-}
 
 function Closing() {
   return (
@@ -413,9 +378,6 @@ function LandgoedTeaser() {
             <KaartPin />
           </div>
         </div>
-      </div>
-      <div className="mx-auto max-w-[92rem] mt-16 text-center">
-        <Wordmark size="sm" className="text-muted-foreground" />
       </div>
     </section>
   );
