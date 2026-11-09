@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import p3_2 from "@/assets/brochure/p3_2.jpg.asset.json";
+import hero from "@/assets/brochure/ons-verhaal-hero.jpg.asset.json";
 
 export const Route = createFileRoute("/ons-verhaal")({
   head: () => ({
@@ -30,21 +30,34 @@ function OnsVerhaalPage() {
   return (
     <div className="bg-background text-foreground">
       <Nav />
-      <figure className="overflow-hidden">
+      <header className="relative h-[86svh] flex items-center justify-center overflow-hidden">
         <RevealImage
-          src={p3_2.url}
-          alt="Een rustig pad door het park van Ridderborn."
-          className="h-[70svh] md:h-[86vh] w-full object-cover"
+          src={hero.url}
+          alt="Een rustig pad door het park van Ridderborn in het avondlicht."
+          className="absolute inset-0 h-full w-full object-cover"
         />
-      </figure>
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative px-6 text-center text-white">
+          <p className="text-[0.7rem] uppercase tracking-[0.28em] text-white/80">Ridderborn</p>
+          <h1 className="font-display mt-6 text-4xl md:text-6xl uppercase tracking-[0.14em] drop-shadow-[0_2px_18px_rgba(0,0,0,0.5)]">
+            Ons verhaal
+          </h1>
+        </div>
+      </header>
 
-      <article className="mx-auto max-w-2xl px-6 py-24 md:py-36">
-        <p className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground">Ons verhaal</p>
-        <h1 className="font-display mt-5 text-4xl md:text-6xl leading-[1.05]">
+      <section className="px-6 pt-24 md:pt-40">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="font-display text-2xl md:text-4xl leading-[1.35]">
+            Al meer dan twintig jaar is Ridderborn ons thuis.
+          </p>
+        </div>
+      </section>
+
+      <article className="mx-auto max-w-2xl px-6 py-24 md:py-32 text-center">
+        <h2 className="font-display text-3xl md:text-4xl leading-[1.1]">
           Meer dan twintig jaar Ridderborn
-        </h1>
+        </h2>
         <div className="mt-12 space-y-6 text-lg text-muted-foreground leading-relaxed">
-          <p>Al meer dan twintig jaar is Ridderborn ons thuis.</p>
           <p>
             In die jaren hebben wij geprobeerd deze bijzondere plek niet alleen te
             onderhouden, maar steeds iets aan haar verhaal toe te voegen.
