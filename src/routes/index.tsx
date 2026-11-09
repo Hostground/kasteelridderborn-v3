@@ -171,7 +171,6 @@ function Index() {
         <StorySection key={s.eyebrow} {...s} />
       ))}
       <LandgoedTeaser />
-      <Closing />
       <Footer />
     </div>
   );
@@ -307,31 +306,6 @@ function StorySection({ eyebrow, title, lead, paragraphs, img, alt, to, note }: 
 }
 
 
-function Closing() {
-  return (
-    <section className="pb-24 md:pb-32">
-      <div className="mx-auto max-w-2xl px-6 pt-16 md:pt-24 text-center">
-        <p className="font-display uppercase tracking-[0.28em] text-2xl md:text-3xl">Ridderborn</p>
-        <p className="mt-8 font-display text-xl md:text-2xl leading-relaxed">
-          Een plek om te ontdekken.
-          <br />
-          Een plek om te koesteren.
-          <br />
-          Een plek om door te geven.
-        </p>
-        <Link
-          to="/contact"
-          className="mt-12 inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] border-b border-foreground/25 pb-2 hover:border-foreground transition-colors"
-        >
-          Contact <span aria-hidden="true">→</span>
-        </Link>
-        <p className="mt-16 text-xs text-muted-foreground">
-          Ook van ons: <Link to="/antwerpen" className="underline underline-offset-4 hover:text-foreground">VenueFourteen in Antwerpen</Link>
-        </p>
-      </div>
-    </section>
-  );
-}
 
 function LandgoedTeaser() {
   return (
