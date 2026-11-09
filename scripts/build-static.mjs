@@ -12,7 +12,7 @@ const server = join(dist, "server");
 
 // Pagina's om te prerenderen. Cap ruim onder hosting-limits.
 const MAX_PRERENDER_PAGES = 50;
-const routes = ["/", "/het-landgoed", "/kasteel-ridderborn", "/angelpark", "/de-oranjerie", "/ridderboeren", "/de-overzijde", "/shabos", "/waterberg", "/antwerpen", "/contact"];
+const routes = ["/", "/het-landgoed", "/kasteel-ridderborn", "/angelpark", "/de-oranjerie", "/ridderboeren", "/de-overzijde", "/shabos", "/waterberg", "/ons-verhaal", "/antwerpen", "/contact"];
 
 if (routes.length > MAX_PRERENDER_PAGES) {
   console.error(`[build-static] too many prerender routes (${routes.length} > ${MAX_PRERENDER_PAGES})`);
