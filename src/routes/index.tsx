@@ -13,7 +13,6 @@ import page22 from "@/assets/brochure/page_22.jpg.asset.json";
 import p3_1 from "@/assets/brochure/p3_1.jpg.asset.json";
 import p5_1 from "@/assets/brochure/DSC_8275.jpg.asset.json";
 import p3_2 from "@/assets/brochure/p3_2.jpg.asset.json";
-import avond from "@/assets/avond-landgoed.jpg";
 import p18_1 from "@/assets/brochure/p18_1.jpg.asset.json";
 import p29_1 from "@/assets/brochure/p29_1.jpg.asset.json";
 
@@ -312,14 +311,6 @@ function StorySection({ eyebrow, title, lead, paragraphs, img, alt, to, note }: 
 function Closing() {
   return (
     <section className="pb-24 md:pb-32">
-      <figure className="overflow-hidden">
-        <RevealImage
-          src={avond}
-          alt="Het landgoed in avondlicht."
-          loading="lazy"
-          className="h-[60svh] md:h-[86vh] w-full object-cover"
-        />
-      </figure>
       <div className="mx-auto max-w-2xl px-6 pt-16 md:pt-24 text-center">
         <p className="font-display uppercase tracking-[0.28em] text-2xl md:text-3xl">Ridderborn</p>
         <p className="mt-8 font-display text-xl md:text-2xl leading-relaxed">
