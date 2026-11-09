@@ -5,3 +5,4 @@
 - [x] Kaart in footer duidelijker
 - [x] Nieuwe static zip v1.0.5
 - [ ] Wordmark 'Ridderborn' verwijderen (geselecteerd op homepage)
+- [ ] Sectie Ons verhaal van homepage verwijderen
