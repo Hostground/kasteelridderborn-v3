@@ -69,8 +69,8 @@ function ContactPage() {
           Discover the <span className="italic text-primary">art of being.</span>
         </h1>
         <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Plan een bezoek, organiseer een retreat, verblijf in Shabos of word 'Vriend
-          van Angelpark'. We ontmoeten je graag in Haspengouw.
+          Plan een bezoek, reageer op een vacature of stel een activiteit voor.
+          We ontmoeten je graag in Haspengouw.
         </p>
       </header>
 
@@ -142,6 +142,20 @@ function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const turnstileSiteKey = useTurnstileSiteKey();
+  const [onderwerp, setOnderwerp] = useState("Algemene vraag");
+  const [vacature, setVacature] = useState("");
+
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search);
+    if (q.get("onderwerp") === "vacature") {
+      setOnderwerp("Reageren op een vacature");
+      const v = q.get("vacature");
+      if (v === "beheerdersstel") setVacature("Beheerdersstel Kasteel Ridderborn, AngelPark en Shabos");
+      if (v === "rendelborn") setVacature("Ondernemend stel Kasteelhoeve Rendelborn");
+    } else if (q.get("onderwerp") === "activiteit") {
+      setOnderwerp("Een activiteit voorstellen");
+    }
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -207,6 +221,28 @@ function ContactForm() {
           E-mailadres
         </label>
         <input id="email" name="email" type="email" required className={inputCls} placeholder="je@email.be" />
+      </div>
+
+      <div>
+        <label htmlFor="onderwerp" className="block text-sm font-medium mb-1.5">
+          Onderwerp
+        </label>
+        <select id="onderwerp" value={onderwerp} onChange={(e) => setOnderwerp(e.target.value)} className={inputCls}>
+          <option>Algemene vraag</option>
+          <option>Reageren op een vacature</option>
+          <option>Een activiteit voorstellen</option>
+        </select>
+        <input type="hidden" name="onderwerp" value={vacature && onderwerp === "Reageren op een vacature" ? `${onderwerp}: ${vacature}` : onderwerp} />
+        {onderwerp === "Reageren op een vacature" && (
+          <p className="mt-2 text-xs text-muted-foreground">
+            {vacature ? `${vacature}. ` : ""}Vertel kort wie je bent, welke ervaring je hebt en wat je graag zou willen bijdragen.
+          </p>
+        )}
+        {onderwerp === "Een activiteit voorstellen" && (
+          <p className="mt-2 text-xs text-muted-foreground">
+            Beschrijf kort je idee: wat, voor wie en welke plek op het landgoed je voor ogen hebt.
+          </p>
+        )}
       </div>
 
       <div>

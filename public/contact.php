@@ -59,6 +59,7 @@ if (!empty($_POST['website'])) {
 $name    = trim((string)($_POST['name'] ?? ''));
 $email   = trim((string)($_POST['email'] ?? ''));
 $message = trim((string)($_POST['message'] ?? ''));
+$onderwerp = mb_substr(str_replace(["\r", "\n"], ' ', trim((string)($_POST['onderwerp'] ?? 'Algemene vraag'))), 0, 120);
 
 if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     fail(422, 'Vul naam, een geldig e-mailadres en een bericht in.');
@@ -111,10 +112,11 @@ if (!empty($config['turnstile_secret'])) {
 $name  = str_replace(["\r", "\n"], ' ', $name);
 $email = str_replace(["\r", "\n"], '', $email);
 
-$subject = '=?UTF-8?B?' . base64_encode('Contactformulier Rendelborn — ' . $name) . '?=';
+$subject = '=?UTF-8?B?' . base64_encode('Ridderborn — ' . $onderwerp . ' — ' . $name) . '?=';
 
 $body  = "Naam: {$name}\n";
 $body .= "E-mail: {$email}\n";
+$body .= "Onderwerp: {$onderwerp}\n";
 $body .= 'Verzonden: ' . date('d-m-Y H:i') . "\n";
 $body .= "\nBericht:\n{$message}\n";
 

@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 
 import { Wordmark } from "@/components/Wordmark";
 import { places } from "@/components/places";
+import { siteConfig } from "@/content/site-config";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -67,7 +68,7 @@ export function Nav() {
           <Wordmark />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10 text-[0.8rem] uppercase tracking-[0.18em] text-muted-foreground">
+        <nav className="hidden md:flex items-center gap-8 text-[0.78rem] uppercase tracking-[0.18em] text-muted-foreground">
           <Link to="/het-landgoed" className="hover:text-foreground transition-colors">
             Het Landgoed
           </Link>
@@ -85,6 +86,14 @@ export function Nav() {
           <Link to="/ons-verhaal" className="hover:text-foreground transition-colors">
             Ons verhaal
           </Link>
+          <Link to="/het-boek" className="hover:text-foreground transition-colors">
+            Het Boek
+          </Link>
+          {siteConfig.vacaturesActief && (
+            <Link to="/vacatures" className="hover:text-foreground transition-colors">
+              Vacatures
+            </Link>
+          )}
           <Link to="/contact" className="hover:text-foreground transition-colors">
             Contact
           </Link>
@@ -169,6 +178,14 @@ export function Nav() {
           >
             Ons verhaal
           </Link>
+          <Link to="/het-boek" onClick={() => setOpen(false)} className="block py-3 text-base border-b border-border/40">
+            Het Boek
+          </Link>
+          {siteConfig.vacaturesActief && (
+            <Link to="/vacatures" onClick={() => setOpen(false)} className="block py-3 text-base border-b border-border/40">
+              Vacatures
+            </Link>
+          )}
           <Link
             to="/contact"
             onClick={() => setOpen(false)}

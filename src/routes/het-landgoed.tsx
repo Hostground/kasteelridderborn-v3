@@ -73,6 +73,12 @@ function HetLandgoedPage() {
             aan de overzijde van de weg de graslanden. Verder weg horen ook de gronden in
             Vliermaal en het bos van Shabos bij het geheel.
           </p>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+            We willen niet alles zelf organiseren. Ridderborn kan een plek zijn waar
+            mensen, groepen en initiatiefnemers hun eigen passende activiteiten
+            onderzoeken: kunst, muziek, natuurbeleving, stilte, ontmoeting of een
+            kleinschalige bijeenkomst.
+          </p>
         </div>
       </section>
 

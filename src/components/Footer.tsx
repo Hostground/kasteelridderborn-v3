@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { siteConfig } from "@/content/site-config";
 
 import avond from "@/assets/footer-angelpark.jpg";
 import { Wordmark } from "@/components/Wordmark";
@@ -70,6 +71,8 @@ export function Footer() {
               <ul className={listCls}>
                 <li><Link to="/het-landgoed" className={linkCls}>Het Landgoed</Link></li>
                 <li><Link to="/ons-verhaal" className={linkCls}>Ons verhaal</Link></li>
+                <li><Link to="/het-boek" className={linkCls}>Het Boek</Link></li>
+                {siteConfig.vacaturesActief && <li><Link to="/vacatures" className={linkCls}>Vacatures</Link></li>}
               </ul>
             </div>
             <div>

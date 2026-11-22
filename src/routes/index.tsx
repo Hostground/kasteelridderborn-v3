@@ -255,6 +255,11 @@ function Opening() {
             landbouwgronden en uitgestrekte weilanden. Verderop liggen Shabos en
             Waterberg, ieder met een heel eigen karakter.
           </p>
+          <p>
+            Het landgoed ligt in Hasselt, in het hart van Haspengouw. Het kan een plek
+            zijn waar ook anderen hun eigen passende activiteiten organiseren, van kunst
+            en muziek tot stilte, natuur en ontmoeting.
+          </p>
         </div>
         <p className="mt-10 font-display text-xl md:text-2xl">
           Verschillende plekken, maar samen één verhaal.

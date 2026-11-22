@@ -7,3 +7,5 @@
 - [x] Wordmark 'Ridderborn' verwijderen (geselecteerd op homepage)
 - [x] Sectie Ons verhaal van homepage verwijderen
 - [x] Slotsectie homepage verwijderd
+- [x] Klantinstructies 18 nov: Het Boek, Vacatures, contactonderwerp, positionering
+- [ ] Het Boek: hoofdstukken (wacht op tekst Jean-Pierre), foto's van John, link Spirit Connection
